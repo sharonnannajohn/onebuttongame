@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Button Archery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="score-display">
+                <span class="label">Score</span>
+                <span id="score">0</span>
+            </div>
+            <div class="round-display">
+                <span class="label">Round</span>
+                <span id="round">1</span>
+            </div>
+            <div class="misses-display">
+                <span class="label">Misses</span>
+                <span id="misses">0</span> / 
+                <span id="maxMisses">5</span>
+            </div>
+        </div>
+
+        <!-- Canvas Area -->
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas"></canvas>
+            <div id="resultText" class="result-text"></div>
+        </div>
+
+        <!-- Control Button -->
+        <div class="controls">
+            <button id="shootButton" class="shoot-button">
+                <span id="buttonText">TAP TO SHOOT</span>
+            </button>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen-overlay">
+            <div class="screen-content">
+                <h1 class="game-title">ONE BUTTON<br>ARCHERY</h1>
+                <p class="subtitle">Tap exactly when the aim aligns!</p>
+
+                <div class="instructions">
+                    <p>🎯 Aim moves automatically</p>
+                    <p>👆 Tap to shoot</p>
+                    <p>🏆 Hit closer to middle = More points</p>
+                    <p>💔 5 misses → Game Over</p>
+                </div>
+
+                <button id="startButton" class="start-button">START GAME</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen-overlay hidden">
+            <div class="screen-content">
+                <h1 class="game-title">GAME OVER</h1>
+
+                <div class="final-stats">
+                    <div class="final-stat">
+                        <span class="stat-label">Final Score</span>
+                        <span class="stat-value" id="finalScore">0</span>
+                    </div>
+                    <div class="final-stat">
+                        <span class="stat-label">Rounds</span>
+                        <span class="stat-value" id="finalRound">0</span>
+                    </div>
+                    <div class="final-stat">
+                        <span class="stat-label">Best Score</span>
+                        <span class="stat-value" id="bestScore">0</span>
+                    </div>
+                </div>
+
+                <button id="restartButton" class="start-button">PLAY AGAIN</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
+
